@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="writing Tools">
+        <li>pen</li>
+        <li>pencil</li>
+        <!-- <li>markrs</li> -->
+</ul>
+
+<button onclick="create_Element()"> Add Element</button>
+
+<ol id="city_list">
+    <li id="k">Karachi</li>
+    <li id="i">islamabad</li>
+    <li id="l">lahore</li>
+</ol>
+<button onclick="delete_Element()"> dalete Element</button>
+<br>
+
+<div onmouseover="mover(this)" onmouseout="mout(this)"
+    style="background-color:cornflowerblue; width:120px; height:20px; padding:40px; font-size: 20px;">
+mouse over me
+</div>
+<br>
+<br>
+<p id="p"></p>
+</body>
+</html>
+<script>
+    function create_Element()
+    {
+        var node=document.createElement("li");
+        var text=document.createTextNode(prompt());
+        node.appendChild(text);
+        document.getElementById("writing Tools").appendChild(node)
+    }
+
+    function delete_Element()
+    {
+        var del=document.getElementById(prompt());
+        del.parentNode.removeChild(del);
+    }
+
+    function mover(a)
+    {
+        a.innerHTML="cursor is on div"
+    }
+    function mout(obj)
+    {
+        obj.innerHTML="bring cursor here"
+    }
+    
+    var n=document.getElementById['name']
+    var c=document.getElementById['color']
+    var r=document.getElementById['result']
+    function fillcolor[]{
+        r.stylt.color=c.value
+        r.value=""
+    }
+
+
+</script>
